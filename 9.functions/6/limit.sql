@@ -1,0 +1,3 @@
+SELECT title FROM books ORDER BY pages DESC LIMIT 5;
+
+SELECT title FROM books ORDER BY pages DESC LIMIT 1,5;
