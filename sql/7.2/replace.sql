@@ -1,4 +1,5 @@
-SELECT REPLACE('Hello World', 'Hell', '&%#@');
+SELECT REPLACE ('Hello World', 'Hell', '&%#@');
+
 -- +----------------------------------------+
 -- | REPLACE('Hello World', 'Hell', '&%#@') |
 -- +----------------------------------------+
@@ -6,8 +7,9 @@ SELECT REPLACE('Hello World', 'Hell', '&%#@');
 -- +----------------------------------------+
 
 SELECT 
-    SUBSTRING(REPLACE(title, 'e', '3'), 1, 10) AS 'Wierd String'
+    REPLACE (SUBSTRING(title, 1, 10), 'e', '3') AS 'Wierd String'
 FROM books;
+
 -- +--------------+
 -- | weird string |
 -- +--------------+

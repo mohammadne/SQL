@@ -1,4 +1,5 @@
 SELECT author_fname, author_lname FROM books;
+
 -- +--------------+----------------+
 -- | author_fname | author_lname   |
 -- +--------------+----------------+
@@ -6,14 +7,16 @@ SELECT author_fname, author_lname FROM books;
 -- | Neil         | Gaiman         |
 -- +--------------+----------------+
 
-SELECT CONCAT('Hello', '...', 'World');
--- +---------------------------------+
--- | CONCAT('Hello', '...', 'World') |
--- +---------------------------------+
--- | Hello...World                   |
--- +---------------------------------+
+SELECT CONCAT ('Hello', '...', 'World');
 
-SELECT CONCAT(author_fname, ' ', author_lname) FROM books;
+-- +----------------------------------+
+-- | CONCAT ('Hello', '...', 'World') |
+-- +----------------------------------+
+-- | Hello...World                    |
+-- +----------------------------------+
+
+SELECT CONCAT (author_fname, ' ', author_lname) FROM books;
+
 -- +------------------------------------------+
 -- | CONCAT (author_fname, ' ', author_lname) |
 -- +------------------------------------------+
@@ -21,7 +24,8 @@ SELECT CONCAT(author_fname, ' ', author_lname) FROM books;
 -- | Neil Gaiman                              |
 -- +------------------------------------------+
 
-SELECT CONCAT(author_fname, ' ', author_lname) AS 'full name' FROM books;
+SELECT CONCAT(author_fname, ' ', author_lname) AS 'fullname' FROM books;
+
 -- +----------------------+
 -- | fullname             |
 -- +----------------------+
@@ -32,6 +36,7 @@ SELECT CONCAT(author_fname, ' ', author_lname) AS 'full name' FROM books;
 SELECT author_fname as fname, author_lname as lname, 
 CONCAT (author_fname, ' ', author_lname) AS 'full name' 
 FROM books;
+
 -- +---------+----------------+----------------------+
 -- | fname   | lname          | full name            |
 -- +---------+----------------+----------------------+
@@ -40,10 +45,11 @@ FROM books;
 -- +---------+----------------+----------------------+
 
 
-SELECT CONCAT_WS(' - ', title, author_fname, author_lname) AS 'full name' FROM books;
--- +------------------------------------------------------------------------+
--- | full name                                                              |
--- +------------------------------------------------------------------------+
--- | The Namesake - Jhumpa - Lahiri                                         |
--- | Norse Mythology - Neil - Gaiman                                        |
--- +------------------------------------------------------------------------+
+SELECT CONCAT_WS(' - ', title, author_fname, author_lname) AS 'description' FROM books;
+
+-- +-------------------------------------------------+
+-- | description                                     |
+-- +-------------------------------------------------+
+-- | The Namesake - Jhumpa - Lahiri                  |
+-- | Norse Mythology - Neil - Gaiman                 |
+-- +-------------------------------------------------+
