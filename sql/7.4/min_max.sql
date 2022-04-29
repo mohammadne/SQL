@@ -1,4 +1,5 @@
 SELECT MIN(released_year) FROM books;
+
 -- +--------------------+
 -- | MIN(released_year) |
 -- +--------------------+
