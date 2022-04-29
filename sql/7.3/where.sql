@@ -1,1 +1,1 @@
-SELECT * FROM books WHERE age>=4;
+SELECT * FROM books WHERE pages>=250;
