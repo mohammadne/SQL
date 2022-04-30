@@ -5,6 +5,7 @@ SELECT title, released_year,
             ELSE '20th Century Lit'
     END AS GENRE
 FROM books;
+
 -- +-----------------------------------------------------+---------------+------------------+
 -- | title                                               | released_year | GENRE            |
 -- +-----------------------------------------------------+---------------+------------------+
@@ -33,4 +34,4 @@ SELECT title, stock_quantity,
         WHEN stock_quantity <= 100 THEN '**'
         ELSE '***'
     END AS STOCK
-FROM books;   
+FROM books;

@@ -1,4 +1,4 @@
--- Select all books published after 2000 and not published in even years
+-- Q: Select all books published after 2000 and not published in even years
 
 SELECT title, released_year 
 FROM books
