@@ -2,10 +2,10 @@
 
 SELECT * FROM orders 
 WHERE customer_id =
-    (
-        SELECT * FROM customers 
-        WHERE last_name='George'
-    );
+(
+    SELECT id FROM customers 
+    WHERE last_name='George'
+);
 
 
 

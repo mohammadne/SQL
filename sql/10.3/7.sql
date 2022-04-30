@@ -1,4 +1,5 @@
 -- Q: analyse the reviewers
+
 SELECT 
     first_name,
     last_name,
@@ -17,6 +18,7 @@ LEFT JOIN reviews
     ON reviewers.id = reviews.series_id
 GROUP BY reviewers.id
 ORDER BY COUNT;
+
 -- +------------+-----------+-------+-----+-----+------+--------+
 -- | first_name | last_name | COUNT | MIN | MAX | AVG  | STATUS |
 -- +------------+-----------+-------+-----+-----+------+--------+

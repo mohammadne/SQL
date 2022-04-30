@@ -3,10 +3,12 @@ SELECT * FROM series;
 SELECT * FROM reviewers;
 
 -- Q: for each serie, find corresponding rate
+
 SELECT title, rating 
 FROM series
 JOIN reviews
     ON series.id = reviews.series_id;
+
 -- +----------------------+--------+
 -- | title                | rating |
 -- +----------------------+--------+
@@ -58,6 +60,3 @@ JOIN reviews
 -- | Stranger Things      |    8.9 |
 -- | Stranger Things      |    8.9 |
 -- +----------------------+--------+
-
-
-

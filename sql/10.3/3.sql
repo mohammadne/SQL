@@ -1,4 +1,5 @@
 -- Q: for each serie, find the average corresponding rate
+
 SELECT title, AVG(rating) as avg_rate 
 FROM series
 JOIN reviews
@@ -22,5 +23,3 @@ ORDER BY avg_rate DESC;
 -- | Bob's Burgers        |  7.52000 |
 -- | General Hospital     |  5.38000 |
 -- +----------------------+----------+
-
-

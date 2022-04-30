@@ -1,8 +1,10 @@
 -- Q: for each reviewer, find corresponding rate
+
 SELECT first_name, last_name, rating 
 FROM reviewers
 JOIN reviews
     ON reviewers.id = reviews.reviewer_id;
+    
 -- +------------+-----------+--------+
 -- | first_name | last_name | rating |
 -- +------------+-----------+--------+

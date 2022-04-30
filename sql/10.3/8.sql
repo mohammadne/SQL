@@ -1,5 +1,4 @@
--- Q: put all data together
--- double inner join
+-- Q: put all data together (double inner join)
 
 SELECT 
     title,
@@ -11,6 +10,7 @@ INNER JOIN reviews
 INNER JOIN series
     ON reviews.series_id = series.id
 ORDER BY title;
+
 -- +----------------------+--------+-----------------+
 -- | title                | rating | reviewer        |
 -- +----------------------+--------+-----------------+
