@@ -5,6 +5,7 @@ JOIN reviews
     ON series.id = reviews.series_id
 GROUP BY title
 ORDER BY avg_rate DESC;
+
 -- +----------------------+----------+
 -- | title                | avg_rate |
 -- +----------------------+----------+

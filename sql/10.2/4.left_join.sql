@@ -1,11 +1,8 @@
--- purpose: select everything from left table along with
--- any matching records in right table.
-
--- take every customer
 SELECT *
 FROM customers
 LEFT JOIN orders 
     ON customers.id = orders.customer_id;
+
 -- +----+------------+-----------+------------------+------+------------+--------+-------------+
 -- | id | first_name | last_name | email            | id   | order_date | amount | customer_id |
 -- +----+------------+-----------+------------------+------+------------+--------+-------------+
@@ -27,6 +24,7 @@ LEFT JOIN orders
     ON customers.id = orders.customer_id
 GROUP BY customers.id
 ORDER BY total_spent DESC;
+
 -- +------------+-----------+-------------+
 -- | first_name | last_name | total_spent |
 -- +------------+-----------+-------------+

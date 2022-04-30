@@ -1,9 +1,5 @@
--- it's known as cross join
--- it's also known as implicit join
--- it produces every possible join or cartesian multiplication of tables
--- UNION product
-
 SELECT * FROM customers, orders;
+
 -- +----+------------+-----------+------------------+----+------------+--------+-------------+
 -- | id | first_name | last_name | email            | id | order_date | amount | customer_id |
 -- +----+------------+-----------+------------------+----+------------+--------+-------------+

@@ -2,6 +2,7 @@ SELECT *
 FROM customers
 RIGHT JOIN orders 
     ON customers.id = orders.customer_id;
+
 -- +------+------------+-----------+------------------+----+------------+--------+-------------+
 -- | id   | first_name | last_name | email            | id | order_date | amount | customer_id |
 -- +------+------------+-----------+------------------+----+------------+--------+-------------+
@@ -18,5 +19,3 @@ RIGHT JOIN orders
 -- then the customer of orders in right join will be null
 -- but in inner join we don't have them but becasue of foreign key constraints
 -- it's not possible, so  drop tables and recreate them without foreign key.
-
--- focus: left join == (right join + alter the place of join sets)

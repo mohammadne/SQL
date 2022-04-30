@@ -36,5 +36,6 @@ VALUES ('2016/02/10', 99.99, 1),
        ('1999/04/11', 450.25, 5);
        
 -- This INSERT fails because of our fk constraint.  No user with id: 98
+
 INSERT INTO orders (order_date, amount, customer_id)
 VALUES ('2016/06/06', 33.67, 98);
