@@ -6,8 +6,7 @@ SELECT * FROM reviewers;
 
 SELECT title, rating 
 FROM series
-JOIN reviews
-    ON series.id = reviews.series_id;
+JOIN reviews ON series.id = reviews.series_id;
 
 -- +----------------------+--------+
 -- | title                | rating |

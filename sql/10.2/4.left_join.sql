@@ -18,15 +18,14 @@ LEFT JOIN orders
 SELECT 
     first_name,
     last_name,
-    IFNULL(SUM(amount), 0) as total_spent
+    IFNULL(SUM(amount), 0) as 'total spent'
 FROM customers
-LEFT JOIN orders 
-    ON customers.id = orders.customer_id
+LEFT JOIN orders ON customers.id = orders.customer_id
 GROUP BY customers.id
 ORDER BY total_spent DESC;
 
 -- +------------+-----------+-------------+
--- | first_name | last_name | total_spent |
+-- | first_name | last_name | total spent |
 -- +------------+-----------+-------------+
 -- | David      | Bowie     |        0.00 |
 -- | Blue       | Steele    |        0.00 |

@@ -1,9 +1,8 @@
--- Q: for each genre, find the average corresponding rate
+-- Q: for each genre, find the average corresponding rate?
 
 SELECT genre, AVG(rating) as avg_rate
 FROM series
-JOIN reviews
-    ON series.id = reviews.series_id
+JOIN reviews ON series.id = reviews.series_id
 GROUP BY genre
 ORDER BY avg_rate DESC;
 
