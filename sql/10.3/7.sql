@@ -13,7 +13,7 @@ SELECT
     END AS 'AVG QUALITY',
     IF(COUNT(rating) > 0, 'ACTIVE', 'INACTIVE') AS STATUS 
 FROM reviewers
-LEFT JOIN reviews ON reviewers.id = reviews.series_id
+LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
 GROUP BY reviewers.id
 ORDER BY COUNT;
 
